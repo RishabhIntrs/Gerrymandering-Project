@@ -96,7 +96,7 @@ attempt_district_change <- function(g, q) {
         
         proposed_district_population <- sum(V(g)$pop[V(g)$district == proposed_district]) + V(g)$pop[node]
         if (proposed_district_population > max_allowed_population) {
-          cat("Change rejected: Would exceed 15% population threshold\n")
+          cat("Change rejected: Would exceed 30% population threshold\n")
           return(g)
         }
         
